@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sử dụng :before và :after</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Sử dụng :before và :after</h1>
+
+    <ul>
+        <li>
+            <span>:before</span> thì thêm vào trước.
+        </li>
+
+        <li>
+            <span>:after</span> thì thêm vào sau.
+        </li>
+
+        <li>
+            Để :before hoặc :after hoạt động
+            <br>
+            thì bắt buộc phải có thuộc tính content.
+        </li>
+
+        <li>
+            Thường thường các bạn hay thấy <code>content: ""</code> người ta để rỗng thế này
+            <br>
+            là vì người ta muốn làm một cái gì đó khác
+            <br>
+            mà không có nội dung bên trong.
+        </li>
+    </ul>
+
+
+    <!-- sử dụng css cho thẻ h3 -->
+    <h3>Nguyễn Văn A</h3>
+
+
+    <p>Các bạn sẽ thấy là:</p>
+
+    <ul>
+        <li>Có thể bôi đen đoạn chữ &nbsp; “Nguyễn Văn A”.</li>
+
+        <li>Không thể bôi đen đoạn chữ &nbsp; “Họ tên: ”.</li>
+
+        <li>Không thể bôi đen đoạn chữ &nbsp; “, 20 tuổi”.</li>
+    </ul>
+</body>
+</html>

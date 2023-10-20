@@ -1,0 +1,16 @@
+h3:before {
+    content: "Họ tên: ";
+}
+
+h3:after {
+    content: ", 20 tuổi";
+}
+
+span {
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+code {
+    color: red;
+}

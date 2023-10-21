@@ -14,3 +14,111 @@ span {
 code {
     color: red;
 }
+
+section.vi-du-1 {
+    width: 500px;
+    height: 280px;
+    box-sizing: border-box;
+    border: solid 1px red;
+
+    position: absolute;
+    top: 20px;
+    left: 660px;
+}
+
+h2#phan-tu-h2 {
+    display: block;
+    margin: 50px;
+    padding: 10px;
+
+    box-sizing: border-box;
+    border: solid 1px red;
+
+    color: black;
+    font-weight: bold;
+
+    position: relative;
+}
+
+h2#phan-tu-h2:before {
+    content: "";
+
+    width: 0%;
+    height: 100%;
+    background: #e74c3c;
+    
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    
+    transition: 1.50s;
+}
+
+/*
+    giờ mình muốn khi rê chuột vào
+    thì cái "background" nó sẽ chạy từ trái qua phải
+
+    rồi sau khi đưa chuột ra
+    thì "background" nó thu về lại
+
+    bên trên thì width: 0%
+    bên dưới thì width: 100% (khi hover)
+*/
+h2#phan-tu-h2:hover:before {
+    width: 100%;
+}
+
+
+section.vi-du-2 {
+    width: 500px;
+    height: 280px;
+    box-sizing: border-box;
+    border: solid 1px rgb(0, 150, 255);
+
+    position: absolute;
+    top: 400px;
+    left: 660px;
+}
+
+/*
+    lấy phần tử h2
+    bằng selector kiểu cha con
+*/
+.vi-du-2 > #phan-tu-h2 {
+    display: block;
+    margin: 50px;
+    padding: 10px;
+
+    box-sizing: border-box;
+    border: solid 1px rgb(0, 150, 255);
+
+    color: black;
+    font-weight: bold;
+
+    position: relative;
+}
+
+
+.vi-du-2 > #phan-tu-h2:before {
+    content: "";
+
+    width: 0%;
+    height: 100%;
+    background: rgb(0, 150, 255);
+    
+    position: absolute;
+    top: 0px;
+    left: auto;         /*change here*/
+    right: 0;           /*change here*/
+    z-index: -1;
+    
+    transition: 1.50s;
+}
+
+
+.vi-du-2 > #phan-tu-h2:hover:before {
+    width: 100%;
+
+    left: 0;            /*change here*/
+    right: auto;        /*change here*/
+}

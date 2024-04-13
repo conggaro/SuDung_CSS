@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tên led lủng RGB</title>
+
+    <!-- cách 1: dùng thẻ link -->
+    <!-- <link rel="stylesheet" href="style.css"> -->
+</head>
+<body>
+    <div id="my-name">Nguyễn Chí Công</div>
+
+    <!-- cách 2: thêm thẻ style cho trang web khi trang load xong -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Tạo một đoạn mã CSS để thêm vào thẻ <style>
+            var customCSS = `
+            #my-name {
+                font-size: 100px;
+                font-weight: 900;
+
+                background-image: linear-gradient(45deg, aqua, blue, magenta, red, orange, yellow, green, cyan, blue, violet, cyan, skyblue);
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-size: 300% 300%;
+
+                animation: animate 10s ease infinite;
+            }
+
+            @keyframes animate {
+                0% {
+                    background-position: 0 0;
+                }
+
+                25% {
+                    background-position: 100% 0;
+                }
+
+                50% {
+                    background-position: 100% 100%;
+                }
+
+                75% {
+                    background-position: 0 100%;
+                }
+
+                100% {
+                    background-position: 0 0;
+                }
+            }
+            `;
+            
+            // Tạo một phần tử <style> mới
+            var styleElement = document.createElement("style");
+            styleElement.innerHTML = customCSS;
+            
+            // Chèn phần tử <style> vào trong <head> của trang
+            document.head.appendChild(styleElement);
+        });
+    </script>
+</body>
+</html>

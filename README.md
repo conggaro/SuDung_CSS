@@ -3,7 +3,7 @@ Người ta hay lập trình overlay với pop up.<br>
 https://www.w3schools.com/howto/howto_css_overlay.asp
 
 # Chuyển màu - dùng gradient
-cho 1 cái thẻ HTML có id="name"<br>
+cho 1 cái thẻ HTML có id="name"<br><br>
 <code>#name {
     font-size: 100px;
     font-weight: 900;

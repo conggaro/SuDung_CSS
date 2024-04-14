@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #myE {
+            --x: 200px;
+            --y: 200px;
+            --bg: black;
+            --deg: 45deg;
+            --scaleX: 1.5;
+            --scaleY: 1.5;
+            
+            width: var(--x);
+            height: var(--y);
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            
+            transform: translate(var(--x), var(--y)) rotate(var(--deg)) scale(var(--scaleX), var(--scaleY));
+            
+            background: linear-gradient(-45deg, aqua, blue, magenta, red, orange, yellow, green, cyan, blue, violet, cyan, skyblue);
+            background-size: 400% 400%;
+            animation: animate 10s ease infinite;
+        }
+        
+        #name {
+            font-size: 20px;
+            font-weight: 900;
+            color: white;
+            transform: rotate(-45deg);
+        }
+        
+        #wall {
+            width: 500px;
+            height: 150px;
+            background: white;
+            
+            position: fixed;
+            top: 60px;
+            left: 50px;
+        }
+        
+        @keyframes animate {
+            0% {
+                background-position: 0 0;
+            }
+        
+            25% {
+                background-position: 100% 0;
+            }
+        
+            50% {
+                background-position: 100% 100%;
+            }
+        
+            75% {
+                background-position: 0 100%;
+            }
+        
+            100% {
+                background-position: 0 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="myE">
+    	<div id="name">Nguyễn Văn A</div>
+    </div>
+    
+	<div id="wall"></div>
+</body>
+</html>
